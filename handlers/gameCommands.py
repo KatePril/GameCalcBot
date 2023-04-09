@@ -35,7 +35,7 @@ async def minus(call: types.CallbackQuery):
     global incorrect, correct, expression_result
     incorrect = incorrect + 1
     if incorrect >= 5:
-        await call.message.answer("You reached the maximum number of incorrect answers (5 answers)\nType '/next' to start again")
+        await call.message.answer("You reached the maximum number of incorrect answers (5 answers)\nYou have {correct} correct answers and {incorrect} incorrect answers\nType '/next' to start again")
         await call.message.answer_sticker('CAACAgIAAxkBAAMPZC7jHZO_BuBNm6EHZZY7epUqAqoAAiUAA8GcYAyxmxTZKx6K1i8E')
         correct = 0
         incorrect = 0
